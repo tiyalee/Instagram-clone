@@ -17,9 +17,9 @@ const Stories = () => {
                         style = {styles.story}
                         />
                         <Text style={{color:'white'}}>{
-                        story.firstName.length>9
-                        ? story.firstName.slice(0,9)+'...'
-                        : story.firstName
+                        story.username.length>9
+                        ? story.username.slice(0,9)+'...'
+                        : story.username
                         }</Text>
                         </View>
                     ))
