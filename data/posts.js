@@ -2,7 +2,7 @@ import Users from "./user";
 
 export const Posts = [
   {
-    imageUrl: "http://placeimg.com/640/490",
+    imageUrl: "https://placeimg.com/640/480/nature/10",
     user: Users[0].username,
     likes:657,
     caption: 'Such a great day!= = ',
@@ -19,7 +19,7 @@ export const Posts = [
     ],
   },
   {
-    imageUrl: "http://placeimg.com/640/300",
+    imageUrl: "http://placeimg.com/240/300",
     user: Users[1].username,
     likes:6557,
     caption: 'Such a great day!= = ',
@@ -36,7 +36,7 @@ export const Posts = [
     ],
   },
   {
-    imageUrl: "http://placeimg.com/640/301",
+    imageUrl: "https://placeimg.com/640/480/nature/1",
     user: Users[2].username,
     likes:1111,
     caption: 'Such a great day!= = ',
@@ -53,7 +53,7 @@ export const Posts = [
     ],
   },
   {
-    imageUrl: "http://placeimg.com/140/306",
+    imageUrl: "https://placeimg.com/640/480/nature/5",
     user: Users[3].username,
     likes:666,
     caption: 'Such a great day!= = ',
@@ -70,7 +70,7 @@ export const Posts = [
     ],
   },
   {
-    imageUrl: "http://placeimg.com/340/490",
+    imageUrl: "https://placeimg.com/640/480/nature/1",
     user: Users[4].username,
     likes:9564,
     caption: 'Such a great day!= = ',
