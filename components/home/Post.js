@@ -9,12 +9,15 @@ const Post = ({ post }) => {
       <Divider width={1} orientation="vertical" />
       <PostHeader post={post} />
       <PostImage post={post} />
-      <View style ={{
-          marginHorizontal:15,
-          marginTop:10
-      }}>
-      <PostFooter />
+      <View
+        style={{
+          marginHorizontal: 15,
+          marginTop: 10,
+        }}
+      >
+        <PostFooter />
       </View>
+      <Likes post={post} />
     </View>
   );
 };
@@ -81,26 +84,23 @@ const postFooterIcons = [
 ];
 
 const PostFooter = () => (
-    <View style = {{flexDirection:'row'}}>
-        <View style = {styles.leftFootContainer}>
-  <Icon 
-  imageStyle={styles.footIcon} 
-  imageUrl={postFooterIcons[2]} />
-   <Icon 
-  imageStyle={styles.footIcon} 
-  imageUrl={postFooterIcons[1]} />
-   <Icon 
-  imageStyle={[styles.footIcon,styles.shareIcon]} 
-  imageUrl={postFooterIcons[2]} />
-  </View>
-  <View style = {{
-      flex:1,
-      alignItems:'flex-end'
-  }}>
-   <Icon 
-  imageStyle={styles.footIcon} 
-  imageUrl={postFooterIcons[2]} />
-  </View>
+  <View style={{ flexDirection: "row" }}>
+    <View style={styles.leftFootContainer}>
+      <Icon imageStyle={styles.footIcon} imageUrl={postFooterIcons[2]} />
+      <Icon imageStyle={styles.footIcon} imageUrl={postFooterIcons[1]} />
+      <Icon
+        imageStyle={[styles.footIcon, styles.shareIcon]}
+        imageUrl={postFooterIcons[2]}
+      />
+    </View>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "flex-end",
+      }}
+    >
+      <Icon imageStyle={styles.footIcon} imageUrl={postFooterIcons[2]} />
+    </View>
   </View>
 );
 
@@ -108,6 +108,19 @@ const Icon = ({ imageStyle, imageUrl }) => (
   <TouchableOpacity>
     <Image style={imageStyle} source={{ uri: imageUrl }} />
   </TouchableOpacity>
+);
+
+const Likes = ({ post }) => (
+  <View style={{ flexDirection: "row", marginTop: 4 }}>
+    <Text
+      style={{
+        color: "white",
+        fontWeight: 600,
+      }}
+    >
+      {post.likes.toLocalString("en")}
+    </Text>
+  </View>
 );
 
 const styles = StyleSheet.create({
@@ -120,15 +133,15 @@ const styles = StyleSheet.create({
     borderColor: "#ff8501",
   },
   footIcon: {
-      width:33,
-      height:33
+    width: 33,
+    height: 33,
   },
-  leftFootContainer:{
-      flexDirection:'row'
+  leftFootContainer: {
+    flexDirection: "row",
   },
-  shareIcon:{
-transform:[{rotate:'-320deg'}],
-marginTop:-3
-  }
+  shareIcon: {
+    transform: [{ rotate: "-320deg" }],
+    marginTop: -3,
+  },
 });
 export default Post;
